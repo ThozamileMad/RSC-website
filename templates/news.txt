@@ -1,0 +1,16 @@
+{% extends "home.html" %}
+
+{% block head %}
+	{{ super() }}
+	<link rel="stylesheet" href="static/news-styles.css">
+{% endblock %}
+
+{% block content %}
+	<section id="title'>
+	`	{% include "navigation-bar.html" %}
+	</section>
+	
+	<section id="footer.html">
+		{% include "footer.html" %}
+	</section>
+{% endblock %}

@@ -1,0 +1,4 @@
+/* News Section */
+#news .row {
+	margin-left: 50px;
+}

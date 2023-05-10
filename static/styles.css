@@ -1,0 +1,334 @@
+
+hr {
+	border: 2px solid darkgray;
+    	width: 30%;
+    	border-radius: 10px;
+	margin: 80px auto;
+} 
+
+span {
+	color: #05b615;
+	font-weight: 600;
+}
+
+h2 {
+	font-weight: 800;
+    	margin-bottom: 30px;
+}
+
+p {
+	color: grey;
+}
+
+#main-content, #news, #footer {
+	margin: auto 6.5%;
+}
+
+/* Title Section */
+#title {
+	padding-right: 3.8rem;
+	padding-left: 3.8rem;
+	background-color: #05b615;
+	color: white;
+	text-align: center
+	margin: auto 0;
+}
+
+.navbar {
+        margin-bottom: 35px;
+	padding-top: 15px
+}
+
+.navbar-nav {
+	margin: 0 0 0 6%
+}
+
+.nav-link {
+	margin-right: 1rem;
+	color: white;
+}
+
+.nav-link:hover {
+	color: black
+}
+
+.navbar-brand {
+	color: white;
+	font-weight: 900
+}
+
+.navbar-brand:hover {
+	color: white;
+}
+
+.nav-buttons {
+	margin-left: 2rem;
+}
+
+.nav-buttons a {
+	border-radius: 25px 
+}
+
+.nav-buttons a:hover {
+	background-color: white;
+	border-color: white;
+	color: #05b615;
+}
+
+.first-nav-button {
+	background-color: #F79540;
+	border-color: #F79540;
+	font-weight: 900;
+	margin-right: 5px;
+}
+
+.second-nav-button {
+	background-color: #D21312;
+	border-color: #D21312;
+	font-weight: 900;
+}
+
+
+.title-img {
+	width: 65%;
+	position: relative;
+	left: 80px;
+	z-index: 1	
+}
+
+.big-header {
+	font-weight: 1000;
+	font-size: 80px;
+}
+
+/* Main Content Section */
+#main-content .container {
+	margin-top: 50px;
+}
+
+#main-content .imgs {
+	padding: 0;
+}
+
+.declaration-img {
+	width: 65%;
+}
+
+.paragraphs {
+    	padding-right: 100px;
+}
+
+.d-block {
+    width: 95%!important;
+}
+
+#carouselExampleSlidesOnly {
+	margin-left: 5%;
+}
+
+.team-container {
+	text-align: center;
+	margin-top: 50px;
+	padding-left: 17.5%;
+	padding-right: 17.5%;
+}
+
+.team-container h2 {
+	color: #05b615;
+}
+
+.team-container a{
+	background-color: #05b615;
+	color: white;
+	font-weight: 900;
+	margin: 10px auto auto auto;
+    	font-size: 1.1rem;
+    	border-radius: 30px;
+}
+
+.team-container a:hover {
+	background-color: white;
+	border-color: #05b615;
+	color: #05b615; 
+}
+
+/* Manifesto Section */
+.second-biggest-header {
+	text-align: center;
+	font-weight: 800;
+	color: #05b615;
+	margin-bottom: 30px;
+}
+
+#carouselExampleFade .d-block {
+    	width: 30%!important;
+    	float: right;
+    	margin: 50px;
+}
+
+#carouselExampleFade span img {
+	width: 35%; 
+}
+
+#carouselExampleFade .carousel-item { 
+	 padding-right: 150px;
+    	 padding-left: 150px;
+}
+
+/* News Section */
+#news .row {
+	margin-left: 50px;
+}
+
+.news-link {
+	text-decoration: none;
+	color: #05b615;
+	font-weight: 1000;
+}
+
+.news-link :hover {
+	text-decoration: none;
+	color: black;
+}
+
+/* No Code */
+
+/* Footer */
+#footer {
+	margin: 5% 6.5%;
+	text-align: center;
+}
+
+.footer-links {
+	margin-bottom: 3%;
+}
+
+footer a { 
+	text-decoration: none;
+	margin: auto 30px 50px 30px;
+}
+
+footer a:hover {
+	text-decoration: none;
+}
+
+footer img {
+	width: 8%;
+}
+
+footer .copyright {
+ 	font-size: 14px;
+ 	margin-bottom: 0;
+}
+
+/* Media Query */
+@media (max-width: 600px) {
+	/* Title Section */
+	.navbar {
+		text-align: center;
+	}
+	
+	.navbar-brand {
+		margin-left: 30px;
+	}
+
+	.navbar-toggler {
+		margin: 10px 135px;
+	}
+
+	.nav-buttons {
+		margin: 8px auto auto auto;
+		padding-left: 0;
+	}
+	
+	.big-header {
+		font-size: 70px;
+		text-align: center;
+		margin-bottom: 55px;
+	}
+
+	.title-img {
+    		width: 100%;
+    		left: 5px;
+	}
+	
+	/* Main Content Section */  
+	.declaration-img {
+		width: 100%;	 
+   		margin-bottom: 25px;
+	}
+
+	.paragraphs {
+		padding-right: 0;
+	}
+	
+	.paragraphs p {
+		padding-left: 0;
+	}
+
+	.d-block {
+    		width: 100%!important;
+	}
+
+	.team-container { 
+		padding: 0;
+	}
+	
+	
+	/* Manifesto Section */
+	#manifesto {
+		margin: auto 6.5%;
+	}
+
+	#carouselExampleFade .carousel-item {
+		padding: 0;
+	}
+
+	#carouselExampleFade .d-block {
+    		width: 80%!important;
+    		float: none;
+   		margin: 50px 50px 50px 35px;
+	}
+
+	#carouselExampleFade span img {
+		position: relative;
+	}
+
+	#carouselExampleFade h2, p {
+		padding-left: 5%;
+	}
+
+	.previous-icon {
+		right: 70%;
+	}
+	
+	.next-icon { 
+		left: 70%;	
+	}
+	
+	/* News Section */
+	#news {
+		margin: auto 18.5%;
+	}
+		
+	#news .row {
+		margin-left: auto;
+	}
+
+	.card-column {
+		margin: auto auto 50px auto;
+		padding: 0; 
+	}
+	
+	.card-text {
+		padding-left: 0;
+	}
+	
+	/* Footer Section
+	footer a {
+		margin: auto 5px 50px 10px;
+	}
+
+	footer img {
+		width: 15%;
+	}

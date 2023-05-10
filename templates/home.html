@@ -1,0 +1,144 @@
+
+{% extends "bootstrap/base.html" %}
+
+{% block head %}
+	<!-- google fonts --!>
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&display=swap" rel="stylesheet">
+
+	<!-- bootstrap --!>
+      	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 	
+      	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet">
+      	<link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+
+	<!--Bootstrap's JavaScript scripts-->
+      	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+	<!-- my stylesheet --!>
+	<link rel="stylesheet" href="static/styles.css">
+
+	<!-- my scripts --!>
+
+{% endblock %}
+
+{% block title %} Radical Solidarity Congress {% endblock %}
+
+{% block content %}
+	<section id="title">
+		{% include "navigation-bar.html" %}
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<h1 class="big-header"> turpis <br> massa <br> tincidunt </h1>
+				</div>
+				<div class="col-lg-6">
+					<img class="title-img" src="https://cdn-icons-png.flaticon.com/512/709/709699.png">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="main-content">
+		<div class="container">
+			<div class="row">
+				<div class="imgs col-lg-6">
+					<img class="declaration-img" src="https://cdn-icons-png.flaticon.com/512/709/709699.png">
+				</div>
+				<div class="paragraphs col-lg-6">
+					<h2> Declaration </h2>
+					<p class="declaration-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Ultrices neque ornare aenean euismod elementum. Mauris pharetra et ultrices neque ornare aenean.</p>
+					<p class="declaration-paragraph">Lormem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis blandit turpis cursus in hac habitasse platea dictumst quisque. Ultrices neque ornare aenean euismod elementum. Mauris pharetra et ultrices neque ornare aenean.</p>
+					<p class="declaration-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+  			<div class="carousel-inner">
+    				<div class="carousel-item active">
+      					<img class="d-block" src="static/images/IMG-20230501-WA0014.jpg">
+    				</div>
+				{% for image in images: %}
+    					<div class="carousel-item">
+      						<img class="d-block w-100" src="static/images/{{ image }}">
+    					</div>
+				{% endfor %}
+  			</div>
+		</div>
+		
+		<div class="team-container">
+			<h2> Provincial Chairs </h2>
+			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nulla pharetra diam sit amet. </p>
+			<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+			<a class="btn" role="button" href="{{ url_for('leadership') }}" active> View Leadership </a>
+		</div>
+		<hr>
+		<div class="tabs">
+	</section>
+
+	<section id="manifesto">
+		<h1 class="second-biggest-header"> Objectives and Values </h1> 
+		<div id="carouselExampleFade" class="carousel slide" data-ride="carousel" data-interval="false">
+  			<div class="carousel-inner">
+				{% for lst in data_lst: %}
+					{% if lst == data_lst[0]: %}
+    						<div class="carousel-item active">
+      							<img class="c-image d-block" src="{{ lst[-1] }}">
+							<h2>{{ lst[0] }}</h2>
+							{% for item in lst[1:lst.index(lst[-1])]: %}
+								<p> <span> > </span> {{ item }} </p>
+							{% endfor %}
+   				 		</div>
+					{% else: %}
+    						<div class="carousel-item">
+      							<img class="c-image d-block" src="{{ lst[-1] }}">
+							<h2>{{ lst[0] }}</h2>
+							{% for item in lst[1:lst.index(lst[-1])]: %}
+								<p> <span> > </span> {{ item }} </p>
+							{% endfor %}
+    						</div>
+					{% endif %}
+				{% endfor %}
+ 			 </div>
+  			<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+    				<span class="previous-icon" aria-hidden="true"><img class="previous-icon" src="https://cdn-icons-png.flaticon.com/512/271/271220.png"></span>
+    				<span class="sr-only">Previous</span>
+ 			</a>
+  			<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+    				<span class="next-icon" aria-hidden="true"> <img class="next-icon" src="https://cdn-icons-png.flaticon.com/512/271/271228.png" </img></span>
+    				<span class="sr-only">Next</span>
+ 			</a>
+		</div>
+	</section>
+
+
+	<section id="news">
+		<hr>
+		<h1 class="second-biggest-header"> Recent News </h1>
+		
+		<div class="row">
+			{% for tup in articles: %}
+				<div class="card-column col-lg-4"> 
+					<div class="card" style="width: 18rem;">
+  						<img class="card-img-top" src="{{ tup[0] }}" alt="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_187e16ac0ec%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_187e16ac0ec%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%2299.12312316894531%22%20y%3D%2296.3%22%3EImage%20cap%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+  						<div class="card-body">
+    							<h5 class="card-title">{{ tup[1] }}</h5>
+   							<p class="card-text">{{ tup[2] }}</p>
+    							<a class="news-link" href="{{ tup[3] }}">READ MORE >></a>
+  						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+	
+	<section id="footer"> 
+		{% include "footer.html" %}
+	</section> 
+{% endblock %}
+	

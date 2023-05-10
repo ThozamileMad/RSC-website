@@ -1,0 +1,110 @@
+.member-title {
+	text-align: center;
+	font-weight: 800;
+	color: #05b615;
+	margin: 50px;
+}
+
+.member-image {
+    	width: 25%;
+    	margin-right: 30px;
+}
+
+/* Member Display Section */
+
+.d-block {
+    	width: 30%!important;
+    	float: right;
+    	margin: 50px;
+}
+
+span img {
+	width: 35%; 
+}
+
+.carousel-item { 
+	 padding-right: 150px;
+    	 padding-left: 150px;
+}
+
+/* Footer */
+#footer {
+	margin: 5% 6.5%;
+	text-align: center;
+}
+
+.footer-links {
+	margin-bottom: 3%;
+} 
+
+footer a {
+	text-decoration: none;
+	margin: auto 30px 50px 30px;
+}
+
+footer a:hover {
+	text-decoration: none;
+}
+
+footer img {
+	width: 8%;
+}
+
+footer .copyright {
+ 	font-size: 14px;
+ 	margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+	/* Main Content Section */
+	.member-image {
+    		width: 35%;
+		margin: 0;
+	}
+	
+	
+	/* Member Display Section */
+	#member-display {
+		margin: auto 6.5%;
+	}
+
+	.carousel-item {
+		padding: 0;
+	}
+
+	.d-block {
+    		width: 30%!important;
+    		float: none;
+   		margin: 50px 50px 50px 35px;
+	}
+
+	span img {
+		position: relative;
+	}
+	
+	#carouselExampleFade h2, p {
+    		padding-left: 0;
+	}
+
+	.carousel-header, .carousel-line {
+		padding-left: 5%;
+	}
+
+	.previous-icon {
+		right: 70%;
+	}
+	
+	.next-icon {
+		left: 70%;	 
+	}
+	
+	/* Footer Section */
+	footer a {
+		margin: auto 5px 50px 10px
+	}
+
+	footer img {
+		width: 15%
+	}
+
+}

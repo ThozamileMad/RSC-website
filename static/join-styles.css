@@ -1,0 +1,52 @@
+
+h2 {
+	text-align: center;
+	color: red;
+}
+
+p {
+	color: red;
+}
+
+/* Form Section */
+input.btn {
+	color: white;
+	background-color: #05b615;
+}
+
+input.btn:hover {
+	color: #05b615;
+	background-color: white;
+	border-style: solid;
+	border-color: #05b615;
+}
+
+#form {
+	padding-left: 35%;
+        padding-right: 35%;
+}
+
+.form-control {
+	border-radius: 30px;
+	border-color: #05b615;
+	padding-left: 5%;
+}
+
+/* Media Query */
+@media (max-width: 600px) { 
+	/* Form Section */
+	#form {
+		padding-left: 6.5%;
+        	padding-right: 6.5%;
+	}
+
+	/* Footer Section */
+	footer a {
+		margin: auto 5px 50px 10px
+	}
+
+	footer img {
+		width: 15%
+	}
+}
+}

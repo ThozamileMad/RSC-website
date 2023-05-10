@@ -1,0 +1,40 @@
+
+{% extends "home.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block head %}
+	{{ super() }}
+	<link rel="stylesheet" href="static/join-styles.css">
+	<style>
+	{% with messages = get_flashed_messages() %}
+		{% if messages: %}
+			{% if "ID" in messages[0]: %}
+				#id_number {
+					border-color: red;
+				}
+			{% endif %}
+		{% endif %}
+	{% endwith %}
+	</style>
+{% endblock %}
+ 
+{% block content %}
+     <section id="title">
+        {% include "navigation-bar.html" %}
+     </section>
+
+     <section id="form">
+	{% with messages = get_flashed_messages() %}
+		{% if messages: %}
+			<h2> {{ messages[0] }} </h2>
+		{% endif %}
+	{% endwith %}
+
+        {{ wtf.quick_form(form, novalidate=True) }}
+        {{ wtf.form_errors(form, hiddens="only") }}
+     </section>
+
+     <section id="footer">
+        {% include "footer.html" %}
+     </section>
+{% endblock %}

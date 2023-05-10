@@ -1,0 +1,50 @@
+/* News Section */
+#news .row {
+	margin-left: 50px;
+}
+
+.card-column {
+	margin-bottom: 10%;
+}
+
+a {
+	text-decoration: none;
+	color: #05b615;
+	font-weight: 1000;
+}
+
+a:hover {
+	text-decoration: none;
+	color: black;
+}
+
+/* Footer Section */
+#footer {
+    	margin: 0 6.5% 5% 6.5%; 
+}
+
+/* Media Query */
+@media (max-width: 600px) {
+	/* News Section */
+	#news {
+		margin: auto 20%;
+	}
+		
+	#news .row {
+		margin-left: auto;
+	}
+
+	.card-column {
+		margin: auto auto 50px auto;
+		padding: 0; 
+	}
+
+	/* Footer Section */
+	footer a {
+		margin: auto 5px 50px 10px
+	}
+
+	footer img {
+		width: 15%
+	}
+}

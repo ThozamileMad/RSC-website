@@ -1,0 +1,23 @@
+
+
+  <!-- Footer -->
+  <footer>
+	<div class="footer-links">
+		<span> 
+              		<a href="#">
+   				<img src="https://cdn-icons-png.flaticon.com/512/2168/2168336.png">
+	      		</a>
+		</span>
+		<span> 
+              		<a href="#">
+                 		<img src="https://cdn-icons-png.flaticon.com/512/2168/2168281.png">
+              		</a>
+		</span>
+		<span>
+			<a href="#">
+	      			<img src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png">
+              		</a>
+		</span>
+       </div>
+       <p class="copyright text-muted">Copyright &copy; Radical Solidarity Congress {{ current_year }}</p>
+  </footer>
