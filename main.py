@@ -7,6 +7,7 @@ from forms import ContactForm, JoinForm
 from news import MakeSoup
 from requests.exceptions import ConnectionError
 from functools import wraps
+import gunicorn
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "SSSHHHHHHHHH It's a secret"
@@ -34,7 +35,7 @@ def data(file, lst):
     return more_altered_contents
 
 
-def current_year():
+def current_year:
     date_time = datetime.now()
     year = date_time.strftime("%Y")
     return year
